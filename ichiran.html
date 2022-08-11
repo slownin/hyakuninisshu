@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>百人一首|一覧</title>
+    <style>
+        * {
+            color: #333;
+        }
+        table {
+            border-collapse: collapse;
+        }
+        tr {
+            border-bottom: 1px solid #aaa;
+        }
+        td {
+            padding: 0.5rem 1rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>百人一首</h1>
+
+    <h2>一覧</h2>
+
+    <div>
+        <a href="index.html">戻る</a>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>番号</th>
+                <th>上の句</th>
+                <th>下の句</th>
+                <th>作者</th>
+            </tr>
+        </thead>
+        <tbody id="list-body"></tbody>
+    </table>
+
+    <script id="tmpl-row" type="text/x-jsrender">
+        <tr>
+            <td>{{:bango}}</td>
+            <td>{{:kaminoku}}</td>
+            <td>{{:shimonoku}}</td>
+            <td>{{:sakusha}}</td>
+        </tr>
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsrender/1.0.11/jsrender.min.js" integrity="sha512-bKlNlbTH3duwZ28zoqEhXui/yuaPuQVci6OAVu0zh2WfYbEKD39HszVR8byP4/L4YyBo3b5CGIY+4ldVN93uCg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/list.js"></script>
+</body>
+</html>

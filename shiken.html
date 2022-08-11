@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>百人一首|試験</title>
+</head>
+<body>
+    <h1>百人一首</h1>
+
+    <h2>試験</h2>
+
+    <div>
+        <a href="index.html">戻る</a>
+    </div>
+
+    出題範囲（最大）
+    <input type="number" id="range-max" min="1" max="100" required>
+    <button type="button" id="btn-shutsudai">出題</button>
+
+    <div id="question"></div>
+
+    <script id="tmpl-question" type="text/x-jsrender">
+        <div>
+            歌番号: {{:bango}}
+        </div>
+        <div>
+            <button type="button" id="btn-show-answer">回答</button>
+        </div>
+        <div id="answer" style="display: none;">
+            <div>歌: {{:kaminoku}} {{:shimonoku}}</div>
+            <div>作者: {{:sakusha}}</div>
+        </div>
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsrender/1.0.11/jsrender.min.js" integrity="sha512-bKlNlbTH3duwZ28zoqEhXui/yuaPuQVci6OAVu0zh2WfYbEKD39HszVR8byP4/L4YyBo3b5CGIY+4ldVN93uCg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/shiken.js"></script>
+</body>
+</html>
